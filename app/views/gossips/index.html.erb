@@ -3,7 +3,7 @@
 <br/>
 
 <% @gossips.each do |gossip| %>
-	<h2><%= gossip.anonymous_author %></h2>
+	<h2>Autheur : <%= gossip.anonymous_author %></h2>
 
 	<p><%= gossip.content %></p>
 	<p>
@@ -11,7 +11,6 @@
 		<a href='<%= edit_gossip_path(gossip.id) %>'class='btn btn-warning'>Editer</a>
 		<a href='<%= gossip_path(gossip.id) %>' class='btn btn-danger' data-confirm='Etes vous sur?' data-method='DELETE'>Supprimer</a>
 	</p>
-
 <% end %>
 
 <br/>
